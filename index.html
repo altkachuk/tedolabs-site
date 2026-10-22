@@ -7,7 +7,11 @@
 <meta name="description" content="Tedo Labs builds verification tools for businesses that depend on accurate details. Solid engineering, AI where it helps, and people who care.">
 <meta property="og:title" content="Tedo Labs — Truth in every detail">
 <meta property="og:description" content="Verification built on solid engineering, AI where it helps, and people who care.">
-<meta property="og:url" content="https://tedolabs.com">
+<meta property="og:url" content="https://tedolabs.com/">
+<link rel="alternate" hreflang="en" href="https://tedolabs.com/">
+<link rel="alternate" hreflang="uk" href="https://tedolabs.com/uk/">
+<link rel="alternate" hreflang="es" href="https://tedolabs.com/es/">
+<link rel="alternate" hreflang="x-default" href="https://tedolabs.com/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='36' fill='none' stroke='%230F1B2D' stroke-width='13'/%3E%3Ccircle cx='50' cy='50' r='11' fill='%2314B8A6'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -16,7 +20,11 @@
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--ground); color: var(--ink); font-family: Inter, system-ui, sans-serif; line-height: 1.6; }
   main { min-height: 100vh; display: flex; flex-direction: column; max-width: 760px; margin: 0 auto; padding: 0 24px; }
-  header { padding: 72px 0 48px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .lang { display: flex; justify-content: flex-end; gap: 4px; padding-top: 24px; font-size: 14px; letter-spacing: 1px; }
+  .lang a { padding: 6px 10px; border-radius: 6px; text-decoration: none; color: var(--muted); }
+  .lang a:hover { color: var(--ink); background: var(--line); }
+  .lang a[aria-current="page"] { color: var(--ink); font-weight: 500; background: #FFFFFF; }
+  header { padding: 40px 0 48px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
   .logo { width: 270px; max-width: 100%; height: auto; }
   section { padding: 32px 0; border-top: 1px solid var(--line); }
   h2 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; margin: 0 0 12px; }
@@ -33,6 +41,12 @@
 </head>
 <body>
 <main>
+  <nav class="lang" aria-label="Language">
+    <a href="/" hreflang="en" lang="en" aria-current="page">EN</a>
+    <a href="/uk/" hreflang="uk" lang="uk">UK</a>
+    <a href="/es/" hreflang="es" lang="es">ES</a>
+  </nav>
+
   <header>
     <svg class="logo" viewBox="0 0 200 72" role="img" aria-label="tedo">
       <text x="0" y="66" textLength="148" lengthAdjust="spacing" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="88" fill="#0F1B2D">ted</text>
