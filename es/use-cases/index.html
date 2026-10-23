@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casos de uso — Tedo Labs</title>
+<meta name="description" content="Cómo Tedo Labs verifica las tarifas de proveedores para distribuidores y tiendas online de recambios.">
+<meta property="og:title" content="Casos de uso — Tedo Labs">
+<meta property="og:description" content="Cómo Tedo Labs verifica las tarifas de proveedores para distribuidores y tiendas online de recambios.">
+<meta property="og:url" content="https://tedolabs.com/es/use-cases/">
+<link rel="alternate" hreflang="en" href="https://tedolabs.com/use-cases/">
+<link rel="alternate" hreflang="uk" href="https://tedolabs.com/uk/use-cases/">
+<link rel="alternate" hreflang="es" href="https://tedolabs.com/es/use-cases/">
+<link rel="alternate" hreflang="x-default" href="https://tedolabs.com/use-cases/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='36' fill='none' stroke='%230F1B2D' stroke-width='13'/%3E%3Ccircle cx='50' cy='50' r='11' fill='%2314B8A6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --ink: #0F1B2D; --muted: #4A5565; --ground: #F6F7F5; --accent: #14B8A6; --line: #E3E6EA; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: Inter, system-ui, sans-serif; line-height: 1.6; }
+  main { min-height: 100vh; display: flex; flex-direction: column; max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .lang { display: flex; justify-content: flex-end; gap: 4px; padding-top: 24px; font-size: 14px; letter-spacing: 1px; }
+  .lang a { padding: 6px 10px; border-radius: 6px; text-decoration: none; color: var(--muted); }
+  .lang a:hover { color: var(--ink); background: var(--line); }
+  .lang a[aria-current="page"] { color: var(--ink); font-weight: 500; background: #FFFFFF; }
+  header { padding: 40px 0 48px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .logo { width: 270px; max-width: 100%; height: auto; }
+  section { padding: 32px 0; border-top: 1px solid var(--line); }
+  ul + h2, p + h2 { margin-top: 28px; }
+  h2 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; margin: 0 0 12px; }
+  p { margin: 0 0 12px; color: var(--muted); font-size: 17px; }
+  .lead { font-size: 20px; color: var(--ink); }
+  ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+  li { padding-left: 24px; position: relative; color: var(--muted); font-size: 17px; }
+  li::before { content: ""; position: absolute; left: 4px; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  a { color: var(--ink); text-underline-offset: 3px; }
+  a:hover { color: #000; }
+  .contact { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 17px; }
+  footer { margin-top: auto; padding: 32px 0 40px; font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <nav class="lang" aria-label="Idioma">
+    <a href="/use-cases/" hreflang="en" lang="en">EN</a>
+    <a href="/uk/use-cases/" hreflang="uk" lang="uk">UK</a>
+    <a href="/es/use-cases/" hreflang="es" lang="es" aria-current="page">ES</a>
+  </nav>
+
+  <header>
+    <a href="/es/" aria-label="Tedo Labs" style="display: contents">
+    <svg class="logo" viewBox="0 0 200 72" role="img" aria-label="tedo">
+      <text x="0" y="66" textLength="148" lengthAdjust="spacing" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="88" fill="#0F1B2D">ted</text>
+      <circle cx="175" cy="43" r="18.2" fill="none" stroke="#0F1B2D" stroke-width="9.7"/>
+      <circle cx="175" cy="43" r="5.7" fill="#14B8A6"/>
+    </svg>
+    <svg class="logo" viewBox="0 0 270 20" role="img" aria-label="Truth in every detail">
+      <text x="15" y="15" textLength="252" lengthAdjust="spacing" font-family="Inter, sans-serif" font-size="15" fill="#4A5565">TRUTH IN EVERY DETAIL</text>
+    </svg>
+    </a>
+  </header>
+
+  <section>
+    <p class="lead">Casos de uso</p>
+    <p><a href="/es/">← Tedo Labs</a></p>
+  </section>
+
+  <section>
+    <h2>Distribuidores y tiendas online de recambios</h2>
+    <p>Recibes tarifas de decenas de proveedores, cada una en su propio formato. Las columnas cambian de sitio, la moneda cambia, las marcas y referencias se escriben de formas distintas. Un solo precio erróneo en la web significa vender por debajo del coste o perder un cliente, y normalmente se detecta cuando ya es tarde.</p>
+    <h2>Qué verificamos</h2>
+    <ul>
+      <li>Estructura del archivo: columnas renombradas, ausentes o intercambiadas, archivos incompletos o sin actualizar.</li>
+      <li>Precios: valores vacíos, cero o negativos, errores ×10 y ÷100, cambios de moneda sin indicar.</li>
+      <li>Cambios respecto a la carga anterior: subidas y bajadas bruscas, cambios masivos de precios.</li>
+      <li>Duplicados con precios distintos, marcas y referencias que faltan, variantes en el nombre de la marca.</li>
+    </ul>
+    <h2>Qué obtienes</h2>
+    <p>Un informe por cada carga con OK / Warning / Block para cada fila y su motivo, y un archivo limpio listo para cargar en tu catálogo.</p>
+  </section>
+
+  <section>
+    <h2>Revisión gratuita de tarifas</h2>
+    <p>Envíanos 2–3 tarifas de proveedores y recibe un informe en 24 horas. Tus archivos solo se usan para la revisión y no se comparten con nadie.</p>
+    <div class="contact"><a href="mailto:info@tedolabs.com">info@tedolabs.com</a><a href="https://t.me/tedolabs">Telegram</a></div>
+  </section>
+
+  <section>
+    <h2>Próximamente</h2>
+    <p>Recambios para maquinaria agrícola e industrial, componentes industriales (rodamientos, correas, hidráulica), neumáticos, material eléctrico y de construcción.</p>
+  </section>
+
+  <footer>© 2026 Tedo Labs · Leópolis · Elche</footer>
+</main>
+</body>
+</html>

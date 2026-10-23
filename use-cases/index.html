@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Use cases — Tedo Labs</title>
+<meta name="description" content="How Tedo Labs checks supplier price lists for auto parts distributors and online stores.">
+<meta property="og:title" content="Use cases — Tedo Labs">
+<meta property="og:description" content="How Tedo Labs checks supplier price lists for auto parts distributors and online stores.">
+<meta property="og:url" content="https://tedolabs.com/use-cases/">
+<link rel="alternate" hreflang="en" href="https://tedolabs.com/use-cases/">
+<link rel="alternate" hreflang="uk" href="https://tedolabs.com/uk/use-cases/">
+<link rel="alternate" hreflang="es" href="https://tedolabs.com/es/use-cases/">
+<link rel="alternate" hreflang="x-default" href="https://tedolabs.com/use-cases/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='36' fill='none' stroke='%230F1B2D' stroke-width='13'/%3E%3Ccircle cx='50' cy='50' r='11' fill='%2314B8A6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --ink: #0F1B2D; --muted: #4A5565; --ground: #F6F7F5; --accent: #14B8A6; --line: #E3E6EA; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: Inter, system-ui, sans-serif; line-height: 1.6; }
+  main { min-height: 100vh; display: flex; flex-direction: column; max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .lang { display: flex; justify-content: flex-end; gap: 4px; padding-top: 24px; font-size: 14px; letter-spacing: 1px; }
+  .lang a { padding: 6px 10px; border-radius: 6px; text-decoration: none; color: var(--muted); }
+  .lang a:hover { color: var(--ink); background: var(--line); }
+  .lang a[aria-current="page"] { color: var(--ink); font-weight: 500; background: #FFFFFF; }
+  header { padding: 40px 0 48px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .logo { width: 270px; max-width: 100%; height: auto; }
+  section { padding: 32px 0; border-top: 1px solid var(--line); }
+  ul + h2, p + h2 { margin-top: 28px; }
+  h2 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; margin: 0 0 12px; }
+  p { margin: 0 0 12px; color: var(--muted); font-size: 17px; }
+  .lead { font-size: 20px; color: var(--ink); }
+  ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+  li { padding-left: 24px; position: relative; color: var(--muted); font-size: 17px; }
+  li::before { content: ""; position: absolute; left: 4px; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  a { color: var(--ink); text-underline-offset: 3px; }
+  a:hover { color: #000; }
+  .contact { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 17px; }
+  footer { margin-top: auto; padding: 32px 0 40px; font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <nav class="lang" aria-label="Language">
+    <a href="/use-cases/" hreflang="en" lang="en" aria-current="page">EN</a>
+    <a href="/uk/use-cases/" hreflang="uk" lang="uk">UK</a>
+    <a href="/es/use-cases/" hreflang="es" lang="es">ES</a>
+  </nav>
+
+  <header>
+    <a href="/" aria-label="Tedo Labs" style="display: contents">
+    <svg class="logo" viewBox="0 0 200 72" role="img" aria-label="tedo">
+      <text x="0" y="66" textLength="148" lengthAdjust="spacing" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="88" fill="#0F1B2D">ted</text>
+      <circle cx="175" cy="43" r="18.2" fill="none" stroke="#0F1B2D" stroke-width="9.7"/>
+      <circle cx="175" cy="43" r="5.7" fill="#14B8A6"/>
+    </svg>
+    <svg class="logo" viewBox="0 0 270 20" role="img" aria-label="Truth in every detail">
+      <text x="15" y="15" textLength="252" lengthAdjust="spacing" font-family="Inter, sans-serif" font-size="15" fill="#4A5565">TRUTH IN EVERY DETAIL</text>
+    </svg>
+    </a>
+  </header>
+
+  <section>
+    <p class="lead">Use cases</p>
+    <p><a href="/">← Tedo Labs</a></p>
+  </section>
+
+  <section>
+    <h2>Auto parts distributors and online stores</h2>
+    <p>You get price lists from dozens of suppliers, each in its own format. Columns move, currencies change, brands and part numbers are written differently. One wrong price on the site means a sale below cost or a lost customer, and it is usually found after the fact.</p>
+    <h2>What we check</h2>
+    <ul>
+      <li>File structure: renamed, missing or swapped columns, truncated or not updated files.</li>
+      <li>Prices: empty, zero or negative values, ×10 and ÷100 errors, unmarked currency switches.</li>
+      <li>Changes against the previous upload: sudden jumps and drops, mass price changes.</li>
+      <li>Duplicates with conflicting prices, missing brands and part numbers, brand spelling variants.</li>
+    </ul>
+    <h2>What you get</h2>
+    <p>A report for every upload with OK / Warning / Block for each row and the reason, plus a clean file ready to load into your catalog.</p>
+  </section>
+
+  <section>
+    <h2>Free price list check</h2>
+    <p>Send us 2–3 supplier price lists and get a report within 24 hours. Your files are used only for the check and are not shared with anyone.</p>
+    <div class="contact"><a href="mailto:info@tedolabs.com">info@tedolabs.com</a><a href="https://t.me/tedolabs">Telegram</a></div>
+  </section>
+
+  <section>
+    <h2>Coming next</h2>
+    <p>Parts for agricultural and heavy machinery, industrial components (bearings, belts, hydraulics), tires, electrical and building supplies.</p>
+  </section>
+
+  <footer>© 2026 Tedo Labs · Lviv · Elche</footer>
+</main>
+</body>
+</html>
